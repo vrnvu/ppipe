@@ -15,7 +15,6 @@ help:
 	@echo "To lint with flake8: make lint"
 	@echo "------------------------------------"
 
-
 test:
 	poetry run pytest
 	
