@@ -7,6 +7,8 @@ authors = ["Arnau Diaz <diazarnau0@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 fastapi = {extras = ["all"], version = "^0.63.0"}
+redis = "^3.5.3"
+celery = "^5.0.5"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
