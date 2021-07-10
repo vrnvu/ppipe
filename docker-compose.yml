@@ -3,16 +3,16 @@ version: "3.7"
 services:
   webservice:
     build: .
-    container_name: ppipe-webservice
+    container_name: wikiqueue-webservice
     ports: 
       - "8000:8000"
-    command: "uvicorn ppipe.webservice.main:app --host 0.0.0.0 --port 8000"
+    command: "uvicorn wikiqueue.webservice.main:app --host 0.0.0.0 --port 8000"
     depends_on: 
       - redis_server
 
   worker:
     build: .
-    command: "celery -A ppipe.webservice.celery.tasks worker --loglevel=INFO"
+    command: "celery -A wikiqueue.webservice.celery.tasks worker --loglevel=INFO"
     depends_on:
       - redis_server
 

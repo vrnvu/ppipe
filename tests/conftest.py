@@ -4,7 +4,8 @@ from starlette.testclient import TestClient
 
 environ["API_KEY"] = "1234"
 
-from ppipe.webservice.main import get_app
+from wikiqueue.webservice.main import get_app
+
 
 @pytest.fixture()
 def test_client():

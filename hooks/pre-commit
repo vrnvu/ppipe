@@ -17,7 +17,7 @@ else:
 os.environ.pop('__PYVENV_LAUNCHER__', None)
 
 # start templated
-INSTALL_PYTHON = '/home/vrnvu/.cache/pypoetry/virtualenvs/ppipe-e6KJ5mME-py3.8/bin/python'
+INSTALL_PYTHON = '/home/vrnvu/.cache/pypoetry/virtualenvs/wikiqueue-e6KJ5mME-py3.8/bin/python'
 ARGS = ['hook-impl', '--config=.pre-commit-config.yaml', '--hook-type=pre-commit']
 # end templated
 ARGS.extend(('--hook-dir', os.path.realpath(os.path.dirname(__file__))))

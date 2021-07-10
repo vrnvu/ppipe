@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ppipe"
+name = "wikiqueue"
 version = "0.1.0"
 description = ""
 authors = ["Arnau Diaz <diazarnau0@gmail.com>"]
@@ -9,6 +9,7 @@ python = "^3.8"
 fastapi = {extras = ["all"], version = "^0.63.0"}
 redis = "^3.5.3"
 celery = "^5.0.5"
+black = "^21.6b0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

@@ -17,7 +17,7 @@ class PredictionRequest(BaseModel):
 def post_predict(
     request: Request,
     authenticated: bool = Depends(security.validate_request),
-    prediction_request: PredictionRequest = None
+    prediction_request: PredictionRequest = None,
 ) -> int:
     if prediction_request is None:
         raise ValueError(NO_VALID_PAYLOAD.format(prediction_request))

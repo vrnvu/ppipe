@@ -12,14 +12,26 @@ help:
 	@echo "To install dependenceis: make install"
 	@echo "To run the project: make run"
 	@echo "To test: make test"
-	@echo "To lint with flake8: make lint"
+	@echo "To lint with flake8: make flake"
 	@echo "------------------------------------"
+
+install:
+	poetry install
 
 test:
 	poetry run pytest
-	
-run:
-	poetry run uvicorn ppipe.webservice.main:app --reload
 
-lint:
+run:
+	poetry run uvicorn wikiqueue.webservice.main:app --reload
+
+flake:
 	poetry run flake8 .
+
+black:
+	poetry run black .
+
+ps:
+	docker-compose ps
+
+restart:
+	docker-compose restart
